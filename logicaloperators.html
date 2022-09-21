@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+    //There are four logical operators in JavaScript:
+    // || (OR), && (AND), ! (NOT), ?? (Nullish Coalescing)
+
+    //OR ||
+    alert( true || true );   // true
+    alert( false || true );  // true
+    alert( true || false );  // true
+    alert( false || false ); // false
+
+    //result is always true except for the case when both operands are false.
+
+    //Most of the time, OR || is used in an if statement to
+    // test if any of the given conditions is true
+
+    let hour = 9;
+    if (hour <10 || hour >18) {
+        alert( 'The office is closed');
+    }
+
+    //more conditions
+    let hours = 12;
+    let isWeekend = true;
+    if (hours <10 || hours >18 ||isWeekend) {
+        alert( 'The office is closed'); // it is the weekend
+    }
+
+    //multiple OR'ed values
+        //Evaluates operands from left to right.
+        //For each operand, converts it to boolean. If the result is true, stops and returns the original value of that operand.
+        //If all operands have been evaluated (i.e. all were false), returns the last operand.
+        //In other words, a chain of OR || returns the first truthy value or the last one if no truthy value is found.
+
+    alert( 1 || 0 ); // 1 (1 is truthy)
+
+    alert( null || 1 ); // 1 (1 is the first truthy value)
+    alert( null || 0 || 1 ); // 1 (the first truthy value)
+
+    alert( undefined || null || 0 ); // 0 (all falsy, returns the last value)
+
+    //Getting the first truthy value from a list of variables or expressions
+
+    let firstName = "";
+    let lastName = "";
+    let nickName = "SuperCoder";
+
+    alert( firstName || lastName || nickName || "Anonymous"); // SuperCoder
+
+    //Short-circuit evaluation
+        //It means that || processes its arguments until the first truthy value is
+        //reached, and then the value is returned immediately, without even touching
+        //the other argument.
+
+        //the example below result is "printed"
+        true || alert("not printed");
+        false || alert("printed");
+        //In the first line, the OR || operator stops the evaluation immediately
+        //upon seeing true, so the alert isn’t run.
+
+    //AND &&
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>

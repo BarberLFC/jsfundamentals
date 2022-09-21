@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Page Title</title>
+</head>
+<body>
+  <script>
+
+// below is an example of a function that maniplutates a text string
+const myText = 'I am a string';
+const newString = myText.replace('string', 'sausage');
+console.log(newString);
+// the replace() string function takes a source string,
+// and a target string and replaces the source string,
+// with the target string, and returns the newly formed string
+
+//below ia a funtion with an array
+const myArray = ['I', 'love', 'chocolate', 'frogs'];
+const madeAString = myArray.join(' ');
+console.log(madeAString);
+// the join() function takes an array, joins
+// all the array items together into a single
+// string, and returns this new string
+
+//function for a random generator
+const myNumber = Math.random();
+// the random() function generates a random number between
+// 0 and up to but not including 1, and returns that number
+
+// FUNCTIONS VS METHODS
+// functions thatare part of an object are methods
+
+function draw() {
+  ctx.clearRect(0,0,WIDTH,HEIGHT);
+  for (let i = 0; i < 100; i++) {
+    ctx.beginPath();
+    ctx.fillStyle = 'rgba(255,0,0,0.5)';
+    ctx.arc(random(WIDTH), random(HEIGHT), random(50), 0, 2 * Math.PI);
+    ctx.fill();
+  }
+}
+// the above function draws 100 random circles inside a <canvas> element.
+// Every time we want to do that, we can just invoke the function with this:
+
+draw(); 
+
+//functions can contain functions within itslef draw uses the random function
+
+function random(number) {
+  return Math.floor(Math.random()*number);
+}
+
+// INVOKING A FUNCTION
+
+// to actually use a function after it has been defined, you've got to run or invoke it.
+// This is done by including the name of the function in the code somewhere, 
+// followed by parentheses.
+
+function myFunction() {
+    alert('hello');
+}
+
+myFunction();
+// calls the function once
+
+// FUNCTION PARAMETERs
+
+// Some functions require parameters to be specified when you are invoking them
+// these are values that need to be included inside the function parentheses, 
+// which it needs to do its job properly.
+
+// The browser's built-in string replace() function however needs two parameters
+// the substring to find in the main string, and the substring to replace that
+// string with:
+
+const myText = 'I am a string';
+const newString = myText.replace('string', 'sausage');
+
+// OPTIONAL PARAMETERS
+
+// Sometimes parameters are optional — you don't have to specify them. 
+// If you don't, the function will generally adopt some kind of default behavior. 
+// As an example, the array join() function's parameter is optional:
+
+const myArray = ['I', 'love', 'chocolate', 'frogs'];
+const madeAString = myArray.join(' ');
+console.log(madeAString);
+// returns 'I love chocolate frogs'
+
+const madeAnotherString = myArray.join();
+console.log(madeAnotherString);
+// returns 'I,love,chocolate,frogs'
+
+// DEFAULT PARAMETERS
+
+// unction and want to support optional parameters, you can specify default values by
+// adding = after the name of the parameter, followed by the default value:
+
+function hello(name = 'Chris') {
+  console.log(`Hello ${name}!`);
+}
+
+hello('Ari'); // Hello Ari!
+hello();      // Hello Chris!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
